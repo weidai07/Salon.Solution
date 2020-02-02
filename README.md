@@ -24,13 +24,13 @@ Github - https://github.com/weidai07/Salon.Solution
 
 ### Specification
 
-  This programs allows hair salon owners to keep track of how many stylists work for them as well as how many clients each hair stylists have under them. Every client is assigned to a stylists therefore no clients will be left out. 
+  This programs allows hair salon owners to keep track of how many stylists work for them as well as how many clients each hair stylists have under them. Every client is assigned to a stylists therefore no clients will be left out. All the owner of the salon has to do is just click add stylists to add the names of their employees as well as all of the clients each of their employees attends to. 
 
 ## SQL Table
 
 CREATE TABLE `Clients` (
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` longtext,
+  `Name` VARCHAR(255),
   PRIMARY KEY (`ClientId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -47,7 +47,7 @@ CREATE TABLE `StylistClient` (
 
 CREATE TABLE `Stylists` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` longtext,
+  `Name` VARCHAR(255),
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

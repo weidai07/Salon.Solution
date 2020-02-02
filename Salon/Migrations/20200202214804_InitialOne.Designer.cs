@@ -8,8 +8,8 @@ using Salon.Models;
 namespace Salon.Migrations
 {
     [DbContext(typeof(SalonContext))]
-    [Migration("20200202204208_Initial")]
-    partial class Initial
+    [Migration("20200202214804_InitialOne")]
+    partial class InitialOne
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

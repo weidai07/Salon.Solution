@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Salon.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialOne : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
