@@ -10,7 +10,7 @@ namespace Salon.Models
         }
 
         public int ClientId { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; }
 
         public ICollection<StylistClient> Stylists { get; set; }
     }

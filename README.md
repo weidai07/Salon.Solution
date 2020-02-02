@@ -30,7 +30,7 @@ Github - https://github.com/weidai07/Salon.Solution
 
 CREATE TABLE `Clients` (
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,
-  `Description` longtext,
+  `Name` longtext,
   PRIMARY KEY (`ClientId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

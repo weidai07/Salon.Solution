@@ -23,7 +23,7 @@ namespace Salon.Migrations
                     b.Property<int>("ClientId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Name");
 
                     b.HasKey("ClientId");
 
