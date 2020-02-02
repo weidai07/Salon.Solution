@@ -1,0 +1,41 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Salon.Models.Client
+
+<h2>Client Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
+
+@if(@Model.Stylists.Count == 0)
+{
+  <p>This client does not belong to any stylists</p>
+}
+else
+{
+  <h4>Stylists the client belongs to:</h4>
+  <ul>
+  @foreach(var join in Model.Stylists)
+  {
+    <li>@join.Stylist.Name</li>
+  }
+  </ul>
+}
+
+
+  <ul>
+  @foreach(var join in Model.Stylists)
+  {
+    <li>@join.Stylist.Name</li>
+    @using (Html.BeginForm("DeleteStylist", "Clients"))
+    {
+      @Html.Hidden("joinId", @join.StylistClientId)
+      <input type="submit" value="Delete"/>
+    }
+  }
+  </ul>
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
